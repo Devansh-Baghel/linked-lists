@@ -43,6 +43,10 @@ class LinkedList {
       current = current.next;
     }
   }
+
+  getSize() {
+    console.log(this.size);
+  }
 }
 
 const l = new LinkedList();
@@ -51,3 +55,5 @@ l.prepend(200);
 l.prepend(300);
 l.append(400);
 l.print();
+l.getSize();
+
