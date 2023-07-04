@@ -16,6 +16,25 @@ class LinkedList {
     this.size++;
   }
 
+  append(value) {
+    const node = Node(value);
+    let current;
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      current = this.head;
+
+      while (current.next) {
+        current = current.next;
+      }
+
+      current.next = node;
+    }
+
+    this.size++;
+  }
+
   print() {
     let current = this.head;
 
@@ -27,8 +46,8 @@ class LinkedList {
 }
 
 const l = new LinkedList();
-l.prepend("hits");
-l.prepend("new");
-l.prepend("mlac");
+l.prepend(100);
+l.prepend(200);
+l.prepend(300);
+l.append(400);
 l.print();
-// console.log(l);
