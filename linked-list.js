@@ -45,7 +45,7 @@ class LinkedList {
   }
 
   getSize() {
-    console.log(this.size);
+    return this.size;
   }
 
   // get head lol ??? 🤨
@@ -62,7 +62,7 @@ class LinkedList {
       current = current.next;
     }
 
-    console.log(tail);
+    return tail.data;
   }
 
   at(index) {
@@ -74,19 +74,10 @@ class LinkedList {
       counter++;
     }
 
-    console.log(current);
+    return current.data;
   }
 }
 
 const l = new LinkedList();
-l.prepend(100);
-l.prepend(200);
-l.prepend(300);
-l.append(400);
-l.print();
-l.getSize();
-l.getHead();
-l.getTail();
-l.at(0);
 
-export {l};
+export { l };
