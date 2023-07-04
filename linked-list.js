@@ -50,7 +50,7 @@ class LinkedList {
 
   // get head lol ??? 🤨
   getHead() {
-    console.log(this.head.data);
+    return this.head.data;
   }
 
   getTail() {
@@ -64,6 +64,18 @@ class LinkedList {
 
     console.log(tail);
   }
+
+  at(index) {
+    let counter = 0;
+    let current = this.head;
+
+    while (counter < index) {
+      current = current.next;
+      counter++;
+    }
+
+    console.log(current);
+  }
 }
 
 const l = new LinkedList();
@@ -75,3 +87,6 @@ l.print();
 l.getSize();
 l.getHead();
 l.getTail();
+l.at(0);
+
+export {l};
