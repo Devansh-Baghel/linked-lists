@@ -47,6 +47,11 @@ class LinkedList {
   getSize() {
     console.log(this.size);
   }
+
+  // get head lol ??? 🤨
+  getHead() {
+    console.log(this.head.data);
+  }
 }
 
 const l = new LinkedList();
@@ -56,4 +61,4 @@ l.prepend(300);
 l.append(400);
 l.print();
 l.getSize();
-
+l.getHead();
