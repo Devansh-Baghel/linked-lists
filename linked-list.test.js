@@ -32,3 +32,21 @@ describe("At", () => {
     expect(l.at(3)).toBe(300);
   });
 });
+
+describe("Contains", () => {
+  it("returns true for a containing element", () => {
+    expect(l.contains(50)).toBe(true);
+  });
+  
+  it("returns true for a containing element", () => {
+    expect(l.contains(200)).toBe(true);
+  });
+
+  it("returns true for a containing element", () => {
+    expect(l.contains(400)).toBe(true);
+  });
+
+  it("returns false for a non-containing element", () => {
+    expect(l.contains(23)).toBe(false);
+  });
+});

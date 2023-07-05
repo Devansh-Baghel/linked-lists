@@ -76,6 +76,19 @@ class LinkedList {
 
     return current.data;
   }
+
+  contains(value) {
+    let current = this.head;
+
+    while (current) {
+      if (current.data === value) {
+        return true;
+      }
+      current = current.next;
+    }
+
+    return false;
+  }
 }
 
 const l = new LinkedList();
