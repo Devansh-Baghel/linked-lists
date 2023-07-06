@@ -117,6 +117,19 @@ class LinkedList {
 
     return null;
   }
+
+  toString() {
+    let current = this.head;
+    let result = "";
+
+    while (current) {
+      result += current.data;
+      result += " -> ";
+      current = current.next;
+    }
+    result += "null"
+    return result;
+  }
 }
 
 const l = new LinkedList();

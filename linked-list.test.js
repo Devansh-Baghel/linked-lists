@@ -68,3 +68,9 @@ describe("Find", () => {
     expect(l.find(23)).toBe(null);
   });
 });
+
+describe("ToString", () => {
+  it("returns string", () => {
+    expect(l.toString()).toBe("50 -> 100 -> 200 -> 300 -> 400 -> null");
+  })
+});
