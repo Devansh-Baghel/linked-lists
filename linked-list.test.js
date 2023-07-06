@@ -50,3 +50,21 @@ describe("Contains", () => {
     expect(l.contains(23)).toBe(false);
   });
 });
+
+describe("Find", () => {
+  it("returns 0 for a containing element", () => {
+    expect(l.find(50)).toBe(0);
+  });
+  
+  it("returns 2 for a containing element", () => {
+    expect(l.find(200)).toBe(2);
+  });
+
+  it("returns 4 for a containing element", () => {
+    expect(l.find(400)).toBe(4);
+  });
+
+  it("returns null for a non-containing element", () => {
+    expect(l.find(23)).toBe(null);
+  });
+});

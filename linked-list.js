@@ -89,8 +89,42 @@ class LinkedList {
 
     return false;
   }
+
+  // pop() {
+  //   let current = this.head;
+  //   let lastNode;
+
+  //   while (current) {
+  //     lastNode = current;
+  //     current = current.next;
+  //   }
+
+  //   lastNode = null;
+  //   return lastNode
+  // }
+
+  find(value) {
+    let current = this.head;
+    let index = 0;
+
+    while (current) {
+      if (current.data === value) {
+        return index;
+      }
+      index++;
+      current = current.next;
+    }
+
+    return null;
+  }
 }
 
 const l = new LinkedList();
-
+// l.append(100);
+// l.append(200);
+// l.append(300);
+// l.append(400);
+// l.prepend(50);
+// // l.pop();
+// l.print();
 export { l };
